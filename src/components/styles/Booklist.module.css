@@ -1,0 +1,5 @@
+.inner-component {
+  width: 100%;
+  height: 560px;
+  overflow-y: scroll;
+}
