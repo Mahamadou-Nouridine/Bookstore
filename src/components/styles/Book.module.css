@@ -14,6 +14,23 @@
   margin-top: 10px;
 }
 
+.analytics > div:nth-child(2) button {
+  margin-top: 20px;
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
 .book > div:nth-child(1) ul {
   display: flex;
   list-style-type: none;
@@ -26,14 +43,6 @@
   background-color: white;
 }
 
-.book > div:nth-child(1) ul li:nth-child(2) button {
-  border-right: 1px solid #e8e8e8;
-  border-left: 1px solid #e8e8e8;
-  padding: 0 10px;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
 .book > div:nth-child(1) ul li button,
 .book > div:nth-child(1) h5 {
   font-family: "Roboto Slab", serif;
@@ -44,6 +53,14 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+}
+
+.book > div:nth-child(1) ul li:nth-child(2) button {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .book > div:nth-child(1) h4 {
@@ -135,21 +152,4 @@
   line-height: normal;
   letter-spacing: -0.4px;
   color: #121212;
-}
-
-.analytics > div:nth-child(2) button {
-  margin-top: 20px;
-  width: 11.5rem;
-  height: 2.063rem;
-  border-radius: 3px;
-  background-color: #0290ff;
-  font-size: 0.813rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #fff;
-  border: none;
 }
