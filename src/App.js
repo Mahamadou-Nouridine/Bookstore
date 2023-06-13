@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -8,6 +9,7 @@ import Layout from './routes/Layout';
 import './app.css';
 import Books from './routes/Books';
 import Categories from './routes/Categories';
+import store from './redux/store';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +20,11 @@ const router = createBrowserRouter(
   ),
 );
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;
