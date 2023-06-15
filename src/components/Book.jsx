@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import ProgressBar from 'react-customizable-progressbar';
 import styles from './styles/Book.module.css';
-import { actions } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksThunk';
 
 const Book = ({
   category, title, author, itemId,
@@ -19,7 +19,7 @@ const Book = ({
 
           <ul className="actions">
             <li><button type="button">comments</button></li>
-            <li><button type="button" onClick={() => dispatch(actions.remove({ itemId }))}>Remove</button></li>
+            <li><button type="button" onClick={() => dispatch(deleteBook(itemId))}>Remove</button></li>
             <li><button type="button">Edit</button></li>
           </ul>
         </div>
