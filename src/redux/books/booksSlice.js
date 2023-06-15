@@ -9,16 +9,6 @@ const initialState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    add: (state, { payload }) => {
-      state.books = [...state.books, payload];
-    },
-    remove: (state, { payload }) => {
-      state.books = state.books.filter(
-        (book) => book.itemId !== payload.itemId,
-      );
-    },
-  },
   extraReducers: (builder) => {
     builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
       if (payload) state.books = payload;
