@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import styles from './styles/Form.module.css';
-import { actions } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksThunk';
 
 const Form = () => {
-  const initialFormData = { title: '', author: '' };
+  const initialFormData = { title: '', author: '', category: '' };
   const dispatch = useDispatch();
   const [formData, setFormData] = useState(initialFormData);
   const handleTitleChange = (e) => {
@@ -24,7 +24,7 @@ const Form = () => {
 
   const submitBook = (e) => {
     e.preventDefault();
-    dispatch(actions.add({ ...formData, id: v4() }));
+    dispatch(addBook({ ...formData, itemId: v4() }));
     setFormData(initialFormData);
   };
   return (
